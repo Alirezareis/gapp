@@ -53,3 +53,8 @@ jobs:
 
     - name: install
       run: cmake --install . --config ${{ matrix.build-type }}
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: gapp-binaries
+        path: build
